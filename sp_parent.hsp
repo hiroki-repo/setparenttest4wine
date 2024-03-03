@@ -1,0 +1,6 @@
+#include "user32.as"
+#packopt name "sptestp"
+dircmdlines=""+dir_cmdline
+repeat:if strmid(dircmdlines,0,1)=" " {dircmdlines=strmid(dircmdlines,1,strlen(dircmdlines))}else{break}:loop
+SetParent int(dircmdlines),hwnd
+mes stat

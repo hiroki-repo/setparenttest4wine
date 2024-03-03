@@ -1,0 +1,14 @@
+#packopt name "sptestc"
+randomize
+exec "sptestp "+str(hwnd)
+repeat
+redraw 0
+pos 0,0
+color rnd(256),rnd(256),rnd(256)
+boxf
+pos 0,0
+color 0,0,0
+mes hwnd
+redraw 1
+await
+loop
